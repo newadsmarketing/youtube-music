@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import './Home.css'
 import { useGetPlaylistItemsQuery } from '../../reduxtool/services/songsApi';
@@ -39,7 +40,7 @@ const {id} = currentSong;
 
   useEffect(()=>{
     if(songsData.trendingSongs || songsData.newSongs || songsData.bollywoodHitsId){
-      // localStorage.setItem('homepageData',JSON.stringify(songsData))
+       localStorage.setItem('homepageData',JSON.stringify(songsData))
     }
   },[songsData.trendingSongs, songsData.newSongs , songsData.bollywoodHitsId])
   
